@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e7f3ff;
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+}
+
+header{
+    background-color: #1e90ff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    box-shadow: 0 3px 4px rgba(2, 0, 48, 0.5);
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header > nav{
+    display: flex;
+    gap: 15px
+}
+
+header > nav > a{
+    text-decoration: none;
+    color:#fff;
+    font-weight: bold;
+}
+
+header >nav > a:hover {
+    text-decoration: underline;
+    scale: 1.1;
+    color: aqua;
+}
+
+/* Estilo para conteúdo principal */
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 4px rgba(2, 0, 48, 0.5);
+}
+
+footer{
+    background-color: #1e90ff;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 -3px 4px rgba(2, 0, 48, 0.5);
+}
+
+.titulo {
+    text-align: center;
+    color: #1e90ff;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+input{
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+button{
+    background-color: #1e90ff;
+    color: #fff;
+    padding: 10px 20px;
+    border:  none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover{
+    background-color: #0d4073;
+}
+
+.resultado{
+    text-align: center;
+}
+
+.lista_cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.card {
+    text-align: center;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+}
+.card > img {
+    width: 100px;
+    height: 100px;
+}
