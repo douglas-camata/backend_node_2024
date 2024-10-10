@@ -48,12 +48,71 @@ let funcionario = {
     nome: 'Reinaldo',
     idade: 30,
     salario: 5000.00,
+    ativo: true,
     filhos: {
-        filho1: {nome: 'Jorge', idade: 15},
-        filho2: 'Reinaldo Jr'
-    }
-    
+        filho1: 'Jorge',
+        filho2: 'Reinaldo Jr',
+    }    
 }
 console.log(funcionario.filhos.filho1);
-console.log(funcionario.filhos.filho1.idade);
+
+aluno = {
+    nome: 'Marta',
+    idade: 10,
+    turma: { 
+        serie: '5º EF', 
+        ano: 2024 
+    },
+    mae: {
+        nome: 'Ana',
+        celular: '18999999999'
+    },
+    amigos: [
+        'Mario', 
+        'Joana', 
+        'Roberto'
+    ],
+    notas: [
+        {disciplina: 'Matemática', nota: 8.5},
+        {disciplina: 'Português', nota: 9.0}
+    ]
+}
+
+console.log(aluno.idade);  //10
+console.log(aluno.mae.nome); 
+console.log(aluno.mae['nome']);
+console.log(aluno.notas)
+console.log(aluno.amigos);
+console.log(aluno.amigos[0]);
+console.log(aluno.notas[0].nota);
+
+//Desestruturação de objetos
+let colaborador = {
+    nome: 'Maurício',
+    salario: 5000.00,
+    idade: 40,
+    setor: 'RH',
+}
+//Atribuindo dados do objeto a variável da forma comum
+let nomeColaborador = colaborador.nome
+let salarioColaborador = colaborador['salario']
+let idadeColaborador = colaborador.idade
+let setorColaborador = colaborador.set
+
+//Utilizando a desestruturação de objetos 
+let { nome, salario, idade, setor } = colaborador
+
+console.log(nomeColaborador);
+console.log(nome);
+console.log(salario);
+console.log(idade);
+console.log(setor);
+
+console.log(colaborador);
+console.log(JSON.stringify(colaborador));
+
+//Utilizando o arquivo Json externo
+const dadosJson = require('./022_Json.json');
+console.log(dadosJson);
+console.log(dadosJson.turma);
 

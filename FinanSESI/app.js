@@ -1,14 +1,18 @@
 const express = require('express')
 const ejs = require('ejs') 
 const expressLayouts = require('express-ejs-layouts')
+const path = require('path');
 
 const app = express()
 
+
 //Configurações
+// Configura o diretório das views
+app.set('views', path.join(__dirname, 'views'));
 //Configura o motor de templates para EJS
 app.set('view engine', 'ejs')  
 //Configura a pasta para arquivos estáticos (css / img)
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, 'public')));
 //Definir que iremos utilizar um layout padrão
 app.use(expressLayouts)
 app.set('layout', 'layouts/principal')
